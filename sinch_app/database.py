@@ -14,9 +14,9 @@ Base = declarative_base()
 def get_db():
     while True:
         try:
+            logger(__name__, level='info', message='DB Session has started.')
             db = SessionLocal()
             yield db
-            logger(__name__, level='info', message='DB Session has started.')
             break
         except Exception as error:
             logger(__name__, level='exception', message='An exception has occurred.')
