@@ -1,0 +1,43 @@
+2023-10-21 10:58:17,968 - routers.geoloc - INFO - add_geo_via_coor, Adding latitude='99.8349' longitude='118.7384'.
+2023-10-21 10:58:17,972 - urllib3.util.retry - DEBUG - Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+2023-10-21 10:58:17,972 - urllib3.util.retry - DEBUG - Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+2023-10-21 10:58:17,973 - utils.geolocation - ERROR - get_details_via_coordinates, An exception occurred.
+Traceback (most recent call last):
+  File "/home/em/Documents/Job Applications/samples/sinch_app/env/lib/python3.10/site-packages/geopy/geocoders/nominatim.py", line 350, in reverse
+    lat, lon = self._coerce_point_to_string(query).split(',')
+  File "/home/em/Documents/Job Applications/samples/sinch_app/env/lib/python3.10/site-packages/geopy/geocoders/base.py", line 300, in _coerce_point_to_string
+    point = Point(point)
+  File "/home/em/Documents/Job Applications/samples/sinch_app/env/lib/python3.10/site-packages/geopy/point.py", line 166, in __new__
+    return cls.from_string(arg)
+  File "/home/em/Documents/Job Applications/samples/sinch_app/env/lib/python3.10/site-packages/geopy/point.py", line 455, in from_string
+    return cls(latitude, longitude, altitude)
+  File "/home/em/Documents/Job Applications/samples/sinch_app/env/lib/python3.10/site-packages/geopy/point.py", line 188, in __new__
+    _normalize_coordinates(latitude, longitude, altitude)
+  File "/home/em/Documents/Job Applications/samples/sinch_app/env/lib/python3.10/site-packages/geopy/point.py", line 74, in _normalize_coordinates
+    raise ValueError('Latitude must be in the [-90; 90] range.')
+ValueError: Latitude must be in the [-90; 90] range.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/em/Documents/Job Applications/samples/sinch_app/utils/geolocation.py", line 27, in get_details_via_coordinates
+    location = reverse(coordinates)
+  File "/home/em/Documents/Job Applications/samples/sinch_app/env/lib/python3.10/site-packages/geopy/geocoders/nominatim.py", line 352, in reverse
+    raise ValueError("Must be a coordinate pair or Point")
+ValueError: Must be a coordinate pair or Point
+2023-10-21 10:58:17,976 - database - INFO - DB Session has started.
+2023-10-21 10:58:17,977 - database - INFO - DB Session was closed.
+2023-10-21 10:58:48,455 - database - INFO - DB Session has started.
+2023-10-21 10:58:48,455 - database - INFO - DB Session was closed.
+2023-10-21 10:59:14,295 - routers.geoloc - INFO - add_geo_via_coor, Adding latitude='9.8349' longitude='118.7384'.
+2023-10-21 10:59:14,297 - urllib3.util.retry - DEBUG - Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+2023-10-21 10:59:14,297 - urllib3.util.retry - DEBUG - Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+2023-10-21 10:59:14,297 - geopy - DEBUG - Nominatim.reverse: https://nominatim.openstreetmap.org/reverse?lat=9.8349&lon=118.7384&format=json&accept-language=en&addressdetails=1
+2023-10-21 10:59:14,299 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): nominatim.openstreetmap.org:443
+2023-10-21 10:59:15,024 - urllib3.connectionpool - DEBUG - https://nominatim.openstreetmap.org:443 "GET /reverse?lat=9.8349&lon=118.7384&format=json&accept-language=en&addressdetails=1 HTTP/1.1" 200 668
+2023-10-21 10:59:15,025 - utils.geolocation - INFO - get_details_via_coordinates, North National Highway, Tagburos, Puerto Princesa, Mimaropa, Philippines.
+2023-10-21 10:59:15,037 - routers.geoloc - INFO - add_geo_via_coor, latitude='9.8349' longitude='118.7384' has been added.
+2023-10-21 10:59:15,040 - database - INFO - DB Session has started.
+2023-10-21 10:59:15,040 - database - INFO - DB Session was closed.
+2023-10-21 10:59:21,484 - database - INFO - DB Session has started.
+2023-10-21 10:59:21,487 - database - INFO - DB Session was closed.
