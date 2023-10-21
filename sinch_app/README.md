@@ -3,7 +3,7 @@ FastAPI with Geolocator
 This simple application enables you to save geo locations via location address or coordinates.
 You will be able to get or retrieve save locations depending on the set distance in reference with you current location, saved address or coordinates.
 
-Simple CRUD using GET, POST, PUT and DELETE were use.
+Simple CRUD using GET, POST, PUT and DELETE were used.
 
 For modules or libraries used please refer to the requirements.txt.
 
