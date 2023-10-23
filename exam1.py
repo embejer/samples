@@ -1,5 +1,5 @@
 '''
-Wind is the shifting of numbers.
+Wind is the shifter for numbers.
 '''
 
 ground = [[0, 0, 0, 0], 
