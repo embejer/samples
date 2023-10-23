@@ -1,7 +1,7 @@
 '''
 Created By: Marlon Bejer
 Created Date: Oct 21, 2023
-Description: Sinch Technical Exam for Python Developer
+Description: Eastvantage Technical Exam for Python Developer
 
 Application Details;
 - Able to do CRUD using API.
