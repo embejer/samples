@@ -1,6 +1,6 @@
 ## This will be the container for all Data Structures in Python
 
-**Everything in this folder will be code I did myself for learning**
+**Everything in this folder are codes I did myself for learning purposes**
 
 Please do not hesitate to advice me for better coding approach.
 
