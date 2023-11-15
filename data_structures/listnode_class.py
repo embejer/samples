@@ -20,14 +20,21 @@ class ListNode:
         return result
 
     def delete(self, head, val):
-        while head:
-            if head.val == val:
-                head.val = head.next.val
-                head.next = head.next.next
+        if head is None:
+            return []
+        if head.val == val:
+            head = head.next
+            return head
+        curr = head
+        while curr.next:            
+            if curr.next.val == val:
                 break
-            else:
-                head = head.next
-        return head
+            curr = curr.next
+        if curr.next is None:
+            return []
+        else:
+            curr.next = curr.next.next
+            return head
 
     def sum_list(self, head):
         total = 0
