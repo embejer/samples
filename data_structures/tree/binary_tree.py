@@ -9,7 +9,7 @@ class Tree(Generic[T]):
         self.right = None
         self.value_list = []
 
-    def append(self, val: int) -> T:
+    def append(self, val: int) -> None:
         if self.val is None:
             self.val = val
         else:
@@ -25,7 +25,7 @@ class Tree(Generic[T]):
                     self.right.append(val)
 
 
-    def display(self, tree):
+    def display(self, tree: T) -> list[int]:
         if tree is None:
             return self.value_list
         else:
