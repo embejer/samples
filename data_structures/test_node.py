@@ -11,9 +11,10 @@ class Node:
 
     def display(self, head):
         result = []
+        if head.val is None:
+            return result
         curr = head
-        while curr:
-            
+        while curr:            
             if curr.val is not None:
                 result.append(curr.val)
             curr = curr.next
@@ -35,6 +36,21 @@ class Node:
         else:
             curr.next = curr.next.next
             return head
+
+    def insert(self, head, index, val):
+        curr = head
+        new = ListNode(val)
+        cnt = 0
+        while curr:
+            if cnt == index:
+                prev = curr
+                nxt = curr.next
+                new.next = nxt
+                prev.next = new
+                break
+            curr = curr.next
+            cnt += 1
+        return head
     
     def reverse(self, head):
         prev = None
